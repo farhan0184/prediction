@@ -28,7 +28,9 @@
     </nav>
     <div class="content">
         <div class="result">
-            {{prediction_text}}
+            <div class="resultCont">
+                <h4 class='{{prediction_text}}'>{{prediction_text}}</h4>
+            </div>
         </div>
         <div class="container">
             <form  action="/predict"method="post">

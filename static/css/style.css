@@ -70,6 +70,30 @@ nav .cancel-icon{
    display: flex;
    align-items: center;
    justify-content: center;
+   
+}
+.result h4{
+  font-weight: 400;
+  font-size: 30px;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+
+}
+.predict{
+  background-color: #5c5c5c;
+  padding: 40% 15%;
+  color: #fff;
+}
+.No{
+  background-color: #ff0101;
+  color: rgb(255, 255, 255);
+  padding: 40% 35%;
+}
+.Yes{
+  background-color: #016fff;
+  color: rgb(255, 255, 255);
+  padding: 40% 35%;
 }
 .container{
     display: flex;
