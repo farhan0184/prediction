@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <div class="logo">
+            DenguePredict
+        </div>
+        <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </div>
+        
+    </nav>
+    <div class="content">
+        <div class="result">
+            <div class="resultCont">
+                <h4 class='{{prediction_text}}'>{{prediction_text}}</h4>
+            </div>
+        </div>
+        <div class="container">
+            <form  action="/predict"method="post">
+                <div class="step step-1 index active">
+                    <div class="form-group">
+                        <label for="days">Days</label>
+                        <br>
+                        <input  type="text" id="days" name="days" placeholder="days" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="current_temp">Current Temperature</label>
+                        <br>
+                        <input  type="text" id="current_temp" name="current_temp" placeholder="current_temp" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="wbc">WBC</label>
+                        <br>
+                        <input  type="text" id="wbc" name="wbc" placeholder="wbc" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="servere_headche">Servere Headche</label>
+                        <br>
+                        <input type="text"  id="servere_headche" name="servere_headche" placeholder="servere_headche" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="step step-2">
+                    <div class="form-group">
+                        <label for="pain_behind_the_eyes">Pain Behind The Eyes</label>
+                        <br>
+                        <input type="text"  id="pain_behind_the_eyes" name="pain_behind_the_eyes" placeholder="pain_behind_the_eyes" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="joint_muscle_aches">Joint Muscle Aches</label>
+                        <br>
+                        <input type="text"  id="joint_muscle_aches" name="joint_muscle_aches" placeholder="joint_muscle_aches" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="metallic_taste_in_the_mouth">Metallic Taste In The Mouth</label>
+                        <br>
+                        <input type="text"  id="metallic_taste_in_the_mouth" name="metallic_taste_in_the_mouth" placeholder="metallic_taste_in_the_mouth" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="appetite_loss">Appetite Loss</label>
+                        <br>
+                        <input type="text"  id="appetite_loss" name="appetite_loss" placeholder="appetite_loss" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+
+                    <button type="button" class="previous-btn">Prev</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="step step-3">
+                    <div class="form-group">
+                        <label for="addominal_pain">Addominal Pain</label>
+                        <br>
+                        <input type="text"  id="addominal_pain" name="addominal_pain" placeholder="addominal_pain" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="nausea_vomiting">Nausea Vomiting</label>
+                        <br>
+                        <input type="text"  id="nausea_vomiting" name="nausea_vomiting" placeholder="nausea_vomiting" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                       <label for="diarrhoea">Diarrhoea</label>
+                        <br>
+                        <input type="text"  id="diarrhoea" name="diarrhoea" placeholder="diarrhoea" required="required">
+                        <!-- <select  required="required">
+                            <option value="bool">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="hemoglobin">Hemoglobin</label>
+                        <br>
+                        <input  type="text" id="hemoglobin" name="hemoglobin", placeholder="hemoglobin" required="required">
+                    </div>
+
+                    <button type="button" class="previous-btn">Prev</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                <div class="step step-4">
+                    <div class="form-group">
+                        <label for="hematocri">Hematocri</label>
+                        <br>
+                        <input  type="text" id="hematocri" name="hematocri" placeholder="hematocri" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="platelet">Platelet</label>
+                        <br>
+                        <input  type="text" id="platelet" name="platelet" placeholder="platelet" required="required">
+                    </div>
+                    <button type="button" class="previous-btn">Prev</button>
+                    <button type="submit" class="submit-btn">Predicted</button>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/main.js"></script>
+    <script>
+        
+
+        function isInputBool(evt) {
+            var char = String.fromCharCode(evt.which);
+
+            if(!(/[0-1]/.test(ch))){
+                evt.preventDefault();
+            }
+        }
+        const menuBtn = document.querySelector(".menu-icon span");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        menuBtn.onclick = ()=>{
+          items.classList.add("active");
+          menuBtn.classList.add("hide");
+          searchBtn.classList.add("hide");
+          cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = ()=>{
+          items.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          searchBtn.classList.remove("hide");
+          cancelBtn.classList.remove("show");
+          form.classList.remove("active");
+          cancelBtn.style.color = "#ff3d00";
+        }
+     </script>
+</body>
+</html>
+
+<!-- onkeypress="isInputBool(event)"
+onkeypress="isInputBool(event)"
+ -->
